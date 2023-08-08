@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: sql
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sql
+  serviceName: mysql-service    
+  template:
+    metadata:
+      labels:
+        app: sql
+    spec:
+      containers:
+        - name: mysql
+          image: mysql:latest
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secret
+                  key: MYSQL_PASSWORD
+            - name: MYSQL_DATABASE_NAME
+              value: BucketList      
+            - name: MYSQL_PORT
+              value: "3306"                     
+          ports:
+            - containerPort: 3306
+          volumeMounts:
+            - name: mysql-queries
+              mountPath: /docker-entrypoint-initdb.d
+      volumes:
+        - name: mysql-queries
+          configMap:
+            name: mysql-queries-configmap
+        
+
+      
