@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t project_main /var/lib/jenkins/workspace/final-project/'
+                sh 'docker build -t final-project /var/lib/jenkins/workspace/project_main/'
                 sh "docker tag final-project $ECR_REPOSITORY:$BUILD_NUMBER"
             }
         }
