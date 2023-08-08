@@ -98,20 +98,8 @@ resource "aws_instance" "my-instance1" {
   vpc_security_group_ids      = [aws_security_group.tf_securityGroup.id]
   associate_public_ip_address = true
   source_dest_check           = false
-
+  key_pair_name               = "aws"
   tags = {
     Name = "my-instance1"
-  }
-}
-resource "aws_instance" "my-instance2" {
-  ami                         = data.aws_ami.ubuntu.id
-  instance_type               = "t2.large"
-  subnet_id                   = aws_subnet.tf_subnet2.id
-  vpc_security_group_ids      = [aws_security_group.tf_securityGroup.id]
-  associate_public_ip_address = true
-  source_dest_check           = false
-
-  tags = {
-    Name = "my-instance2"
   }
 }
