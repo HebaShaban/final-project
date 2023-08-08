@@ -2,7 +2,7 @@
 A small web app that allow users to create account, login, and make a bucket list.
 This app is implemented using MySQL and Python. Copied from the tutorial http://code.tutsplus.com/tutorials/creating-a-web-app-from-scratch-using-python-flask-and-mysql--cms-22972
 
-# Sprints_Project
+# FINAL-PROJECT
 Sprints Final Project
 # Setting up Jenkins with Terraform, Ansible, AWS, and GitHub
 
@@ -78,21 +78,31 @@ Then add the credentials in jenkins as the previous step
 In your GitHub repository, go to Settings > Webhooks > Add webhook.
 
 1. Payload URL with the Jenkins server's public IP and port 8080.
+  
 2. Change Content type to application/json
+
 3. Which events would you like to trigger this webhook? the you choose (send me everything)
+
 4. "Add Webhook"
 
 
 ## Step 6: Configure Jenkins Pipeline
 
 1.get ecr url from aws add it to jenkins file in the approprtiate location
+
 2.Create a Multibranch Pipeline in Jenkins
+
 3.Create a new pipeline for your GitHub repository.
+
 4.Configure credentials, repository URL, and branch discovery.
 
 ## Step 7: Run the Pipeline
 Commit and push changes to your GitHub repository.
 Jenkins will automatically trigger the pipeline on new commits and perform the defined actions.
+
+1. run all kubernates files in jenkins to get app and database
+2. run dockerfile, docker compose to get app and database
+
 
 
 
@@ -135,8 +145,6 @@ Jenkins will automatically trigger the pipeline on new commits and perform the d
 # ![Screenshot 2023-08-06 034350](https://github.com/HebaShaban/final-project/assets/128882939/7e224e9a-c6cd-4f4f-a7a2-c5cdbda1b88d)
 
 # ![Screenshot 2023-08-06 033018](https://github.com/HebaShaban/final-project/assets/128882939/e510b93e-2c90-4656-ad8c-351c835be1b3)
-
-
 
 # - RUNNING APP WITH DOCKER IN JENKINS
 
