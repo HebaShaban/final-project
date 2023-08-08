@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script {
                     withCredentials([usernamePassword(credentialsId: 'aws-cred', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')]) {
-                        sh "aws eks --region us-east-1 update-kubeconfig --name my-eks-cluster"
+                        sh "aws eks --region us-east-1 update-kubeconfig --name eks-cluster"
                         sh "sed -i 's|<IMAGE-NAME>|$ECR_REPOSITORY:$BUILD_NUMBER|g' /var/lib/jenkins/workspace/project_main/deployment-flaskapp.yml"
                         try {
                             sh "kubectl create configmap mysql-queries-configmap --from-file=/var/lib/jenkins/workspace/project_main/MySQL_Queries/BucketList.sql"
