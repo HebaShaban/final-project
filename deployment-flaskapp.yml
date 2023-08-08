@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: final-project
-          image: hebashaban/final-project:latest
+          image: <IMAGE-NAME>‏
           env:
             - name: MYSQL_HOST
               valueFrom:
