@@ -4,7 +4,7 @@ metadata:
   name: my-app-service
 spec:
   selector:
-    app: python-app
+    app: flaskapp
   ports:
   - protocol: TCP
     port: 80
