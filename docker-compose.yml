@@ -22,11 +22,11 @@ services:
     depends_on:
       - db
     environment:
-      DB_HOST: db
-      DB_PORT: 3306
-      DB_NAME: BucketList
-      DB_USER: root
-      DB_PASSWORD: MyPasswordheba
+      MYSQL_HOST: db
+      MYSQL_PORT: 3306
+      MYSQL_NAME: BucketList
+      MYSQL_USER: root
+      MYSQL_PASSWORD: MyPasswordheba
     ports:
       - "5002:5002"
     restart: on-failure
