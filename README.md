@@ -32,6 +32,18 @@ This app is implemented using MySQL and Python. Copied from the tutorial http://
 
 # ![sign in](https://github.com/HebaShaban/final-project/assets/128882939/50a99917-c051-4168-b5ce-11d233b5d2e0)
 
+# - RUNNING DOCKERFILE IN LOCALHOST
+
+# ![Screenshot 2023-08-06 034350](https://github.com/HebaShaban/final-project/assets/128882939/11f5a7a0-6aca-42f8-94ea-34defe658ca2)
+
+# - RUNNING DATABASE IN APP BY DOCKER IN LOCALHOST
+
+# ![Screenshot 2023-08-06 034350](https://github.com/HebaShaban/final-project/assets/128882939/7e224e9a-c6cd-4f4f-a7a2-c5cdbda1b88d)
+
+# ![Screenshot 2023-08-06 033018](https://github.com/HebaShaban/final-project/assets/128882939/e510b93e-2c90-4656-ad8c-351c835be1b3)
+
+
+
 # - RUNNING APP WITH DOCKER IN JENKINS
 
 # ![docker compose](https://github.com/HebaShaban/final-project/assets/128882939/f794335c-a662-4e95-92f2-24c8cbe1edf7)
