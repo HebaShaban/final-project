@@ -58,7 +58,16 @@
       pip:
         name: docker
         state: present
-       
+    - name: Change permissions for the Docker socket
+      file:
+        path: /var/run/docker.sock
+        mode: "0666"
+    - name: Add the user to the docker group
+      user:
+        name: "{{ ansible_user }}"
+        groups: docker
+        append: yes
+        
   handlers:
     - name: restart_docker
       service:
