@@ -134,7 +134,7 @@ Jenkins will automatically trigger the pipeline on new commits and perform the d
 
 # - SIGN IN DATABASE IN APP BY K8S IN JENKINS
 
-# !sign in](https://github.com/HebaShaban/final-project/assets/128882939/50a99917-c051-4168-b5ce-11d233b5d2e0)
+# ![sign in](https://github.com/HebaShaban/final-project/assets/128882939/50a99917-c051-4168-b5ce-11d233b5d2e0)
 
 # - RUNNING DOCKERFILE IN LOCALHOST
 
